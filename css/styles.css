@@ -217,3 +217,53 @@ footer {
         text-align: center;
     }
 }
+
+.topnav {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.topnav a {
+    float: none;
+    display: block;
+    color: #1C4685;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.topnav a:hover {
+    color: #333333;
+}
+
+.topnav a.active {
+    color: #333333;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
