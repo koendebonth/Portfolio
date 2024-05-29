@@ -10,23 +10,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
         rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
 
 <body>
     <header>
         <h1>Koen de Bonth</h1>
-        <div class="topnav" id="myTopnav">
-            <a href="index.html">Home</a>
-            <a href="over.html">Over Mij</a>
-            <a href="projects.html">Projecten</a>
-            <a href="contact.html">Contact</a>
-            <a href="dashboard.html">Dashboard</a>
-            <a href="docs/CV_Koen_de_Bonth.pdf" download="Koen_de_Bonth_CV">Download mijn CV</a>
-            <a href="javascript:void(0);" class="icon" onclick="toggleNavigationMenu()">
-                <i class="fa fa-bars"></i>
-            </a>
+        <div class="header-wrapper">
+            <div class="dropdown">
+                <button class="dropbtn">Menu 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="over.html">Over Mij</a>
+                    <a href="projects.html">Projecten</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="docs/CV_Koen_de_Bonth.pdf" download="Koen_de_Bonth_CV">Download mijn CV</a>
+                </div>
+            </div> 
         </div>
     </header>
+    <script src="js/main.js"></script>
     <main>
         <section class="hero">
             <h2>Welkom op mijn Portfolio!</h2>
