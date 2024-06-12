@@ -266,3 +266,8 @@ footer {
         width: 100%; /* Zorg ervoor dat de dropdown de volledige breedte van de parent inneemt op kleinere schermen */
     }
 }
+
+.myGif {
+    width: 200px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
