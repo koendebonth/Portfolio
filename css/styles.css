@@ -271,3 +271,26 @@ footer {
     width: 200px; /* Adjust as needed */
     height: auto; /* Maintain aspect ratio */
 }
+
+.linkedin-button {
+    display: inline-block;
+    background-color: #0077B5; /* LinkedIn blauw */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.linkedin-button:hover {
+    background-color: #005582; /* Donkerder blauw bij hover */
+    color: white;
+}
+
+.linkedin-button i {
+    margin-right: 8px;
+    color: white; /* Zet het icoon in wit */
+}
+
