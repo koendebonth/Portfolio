@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Koen de Bonth</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet">
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-size: 30px;
+            }
+    
+            .container {
+                text-align: center;
+            }
+    
+    body, #timer {
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+</style>
+<script>
+    function countdown() {
+        var countDownDate = new Date("Jul 30, 2024 23:59:59").getTime();
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            var timerElement = document.getElementById("timer");
+            timerElement.innerHTML = "Time remaining: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            timerElement.style.opacity = 1;
+            document.body.style.opacity = 1;
+            if (distance < 0) {
+                clearInterval(x);
+                timerElement.innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    }
+</script>
+
+<body onload="countdown()">
+    <div class="container">
+        <h1>Under Construction</h1>
+        <p>This website is currently under construction. Please check back later.</p>
+        <p id="timer">Loading timer...</p>
+    </div>
+</html>

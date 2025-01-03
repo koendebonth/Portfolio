@@ -10,52 +10,71 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
         rel="stylesheet">
-        <style>
-            body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                margin: 0;
-                font-family: 'Source Sans Pro', sans-serif;
-                font-size: 30px;
-            }
-    
-            .container {
-                text-align: center;
-            }
-    
-    body, #timer {
-        opacity: 0;
-        transition: opacity 0.5s;
-    }
-</style>
-<script>
-    function countdown() {
-        var countDownDate = new Date("Jul 30, 2024 23:59:59").getTime();
-        var x = setInterval(function() {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            var timerElement = document.getElementById("timer");
-            timerElement.innerHTML = "Time remaining: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-            timerElement.style.opacity = 1;
-            document.body.style.opacity = 1;
-            if (distance < 0) {
-                clearInterval(x);
-                timerElement.innerHTML = "EXPIRED";
-            }
-        }, 1000);
-    }
-</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
-<body onload="countdown()">
-    <div class="container">
-        <h1>Under Construction</h1>
-        <p>This website is currently under construction. Please check back later.</p>
-        <p id="timer">Loading timer...</p>
-    </div>
+<body>
+    <header>
+        <h1>Koen de Bonth</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="docs/CV_Koen_de_Bonth.pdf" download="Koen_de_Bonth_CV">Download mijn CV</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welkom op mijn Portfolio!</h2>
+        </section>
+
+        <section class="about-me">
+            <figure class="profile-picture">
+                <img src="images/Foto Koen.jpg" alt="Profielfoto van Koen">
+                <figcaption>Koen de Bonth</figcaption>
+            </figure>
+            <p>
+                Hallo! Ik ben Koen, <span id="leeftijd"></span> jaar oud, en een gedreven data professional met een achtergrond in Technische Bedrijfskunde en specialisaties in data-analyse en slimme industrie. Met ervaring in tools zoals Power BI, Python en SQL zet ik data om in waardevolle inzichten om processen te optimaliseren en innovatieve oplossingen te realiseren. Mijn passie voor technologie en data vormt de kern van mijn werk.
+                
+            
+            </p>
+        </section>
+
+        <section class="skills">
+            <h2>Mijn Vaardigheden</h2>
+            <div class="skill">
+                <h3>PowerBI</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 95%;">95%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>Python</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>SQL</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%;">80%</div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h3>Machine Learning</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%;">70%</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Koen's Portfolio</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
 </html>
