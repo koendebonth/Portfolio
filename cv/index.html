@@ -7,7 +7,7 @@
     <title>CV - Koen de Bonth</title>
     <script defer data-domain="koendebonth.nl" src="https://plausible.io/js/script.file-downloads.outbound-links.js"></script>
     <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
@@ -270,7 +270,7 @@
         <nav id="nav">
             <a href="/">Home</a>
             <a href="/cv">CV</a>
-            <a href="docs/CV_Koen_de_Bonth.pdf" download="Koen_de_Bonth_CV">Download PDF CV</a>
+            <a href="../docs/CV_Koen_de_Bonth.pdf" download="Koen_de_Bonth_CV">Download PDF CV</a>
             <a href="/contact">Contact</a>
         </nav>
     </header>
@@ -279,20 +279,20 @@
         <div class="cv-container">
             <!-- CV Header -->
             <div class="cv-header">
+                <div style="margin-bottom: 30px;">
+                    <img src="../images/Foto Koen.jpg" alt="Koen de Bonth" style="width: 180px; height: 180px; border-radius: 20px; object-fit: cover; border: 4px solid rgba(6, 182, 212, 0.4); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 30px rgba(6, 182, 212, 0.3);">
+                </div>
                 <h1>Koen de Bonth</h1>
-                <p class="subtitle">Data Analist | BI Specialist | ML Enthusiast</p>
+                <p class="subtitle">Data Analist | MSc Data Science & Society</p>
                 <div class="cv-contact-info">
                     <a href="https://www.linkedin.com/in/koendebonth/" target="_blank">
                         <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="/contact">
-                        <i class="fas fa-envelope"></i> Contact
                     </a>
                     <a href="https://github.com/koendebonth" target="_blank">
                         <i class="fab fa-github"></i> GitHub
                     </a>
                 </div>
-                <a href="docs/CV_Koen_de_Bonth.pdf" download="Koen_de_Bonth_CV" class="download-cv-btn">
+                <a href="../docs/CV_Koen_de_Bonth.pdf" download="Koen_de_Bonth_CV" class="download-cv-btn">
                     <i class="fas fa-download"></i> Download PDF CV
                 </a>
             </div>
@@ -301,11 +301,18 @@
             <section class="cv-section">
                 <h2><i class="fas fa-user"></i> Over Mij</h2>
                 <p style="line-height: 1.8; font-size: 1.1em;">
-                    Gedreven data professional met een achtergrond in Technische Bedrijfskunde en specialisaties in 
-                    data-analyse en slimme industrie. Met ervaring in tools zoals Power BI, Python en SQL zet ik 
-                    data om in waardevolle inzichten om processen te optimaliseren en innovatieve oplossingen te 
-                    realiseren. Mijn passie voor technologie en data vormt de kern van mijn werk.
+                    Ik ben Koen, data professional met een passie voor technologie, data en ICT. 
+                    Ik combineer mijn technische kennis met data-analyse voor innovatieve oplossingen. 
+                    Met een afgeronde Master Data Science & Society (Tilburg University, 2025) en een Bachelor 
+                    Technische Bedrijfskunde werk ik als Data Analist bij Andra Tech Group. Met ervaring in tools 
+                    zoals Power BI, Python en SQL zet ik data om in waardevolle inzichten om processen te optimaliseren.
                 </p>
+                <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 20px; font-size: 0.95em;">
+                    <div><i class="fas fa-map-marker-alt" style="color: var(--accent-color);"></i> 's-Hertogenbosch, Nederland</div>
+                    <div><i class="fas fa-phone" style="color: var(--accent-color);"></i> +31 6 43 92 00 01</div>
+                    <div><i class="fas fa-envelope" style="color: var(--accent-color);"></i> mail@koendebonth.nl</div>
+                    <div><i class="fas fa-car" style="color: var(--accent-color);"></i> Rijbewijs B</div>
+                </div>
             </section>
 
             <!-- Werkervaring -->
@@ -319,16 +326,17 @@
                             <p class="company">Andra Tech Group</p>
                         </div>
                         <span class="item-date current">
-                            <i class="fas fa-calendar"></i> Okt 2024 - Heden
+                            <i class="fas fa-calendar"></i> Okt 2025 - Heden
                         </span>
                     </div>
                     <div class="item-description">
-                        <p>Als Data Analist ben ik verantwoordelijk voor het analyseren van complexe datasets en het ontwikkelen van data-gedreven oplossingen voor diverse klanten.</p>
+                        <p>Als Data Analist denk ik na over data-gedreven oplossingen voor zowel Andra Tech Group als de bedrijven binnen de groep. Ik vertaal bedrijfsvraagstukken naar concrete data-oplossingen en help bij strategische besluitvorming.</p>
                         <ul>
-                            <li>Ontwikkelen van dashboards en rapportages in Power BI</li>
-                            <li>Data-analyse met Python en SQL</li>
-                            <li>Adviseren van klanten over data strategie en implementatie</li>
-                            <li>Automatiseren van data processen</li>
+                            <li>Ontwikkelen van data-gedreven oplossingen voor de groep en haar bedrijven</li>
+                            <li>Ontwerpen van dashboards en rapportages in Power BI</li>
+                            <li>Data-analyse met Python en SQL voor strategische inzichten</li>
+                            <li>Adviseren over data strategie en implementatie</li>
+                            <li>Automatiseren en optimaliseren van data processen</li>
                         </ul>
                     </div>
                 </div>
@@ -336,22 +344,37 @@
                 <div class="experience-item">
                     <div class="item-header">
                         <div class="item-title">
-                            <h3>Data Analist / BI Developer</h3>
-                            <p class="company">De Rooy</p>
+                            <h3>Project Engineer</h3>
+                            <p class="company">De Rooy Slijpcentrum B.V., Nuenen</p>
                         </div>
                         <span class="item-date">
-                            <i class="fas fa-calendar"></i> Tot Okt 2024
+                            <i class="fas fa-calendar"></i> Sep 2023 - Sep 2025
                         </span>
                     </div>
                     <div class="item-description">
-                        <p>Verantwoordelijk voor het ontwikkelen en onderhouden van Business Intelligence oplossingen en data-analyses.</p>
+                        <p>Als Project Engineer was ik verantwoordelijk voor het optimaliseren van productieprocessen door middel van data-analyse en technische oplossingen.</p>
                         <ul>
-                            <li>Ontwerpen en bouwen van Power BI dashboards voor operationele en strategische rapportages</li>
-                            <li>Data-extractie, -transformatie en -laden (ETL) processen</li>
-                            <li>SQL queries schrijven voor data-analyse en rapportage</li>
-                            <li>Samenwerken met verschillende afdelingen om data-gedreven beslissingen te faciliteren</li>
-                            <li>Training en ondersteuning van gebruikers in Power BI</li>
+                            <li>Verzamelen en analyseren van machinedata van CNC frees- en slijpmachines</li>
+                            <li>Ontwikkelen van Power BI dashboards voor operationele en strategische rapportages</li>
+                            <li>Identificeren en aanpakken van inefficiënties in het productieproces</li>
+                            <li>Implementeren van data-gedreven verbeteringen</li>
+                            <li>Samenwerken met verschillende afdelingen om procesoptimalisaties te realiseren</li>
                         </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <h3>Ambulanten Coach</h3>
+                            <p class="company">Kasteel Maurick, Vught</p>
+                        </div>
+                        <span class="item-date">
+                            <i class="fas fa-calendar"></i> Jun 2019 - Jul 2024
+                        </span>
+                    </div>
+                    <div class="item-description">
+                        <p>Begeleiden en ondersteunen van cliënten in hun dagelijkse leven en persoonlijke ontwikkeling.</p>
                     </div>
                 </div>
             </section>
@@ -363,30 +386,118 @@
                 <div class="education-item">
                     <div class="item-header">
                         <div class="item-title">
-                            <h3>Technische Bedrijfskunde</h3>
-                            <p class="company">Hogeschool/Universiteit</p>
+                            <h3>Master Data Science & Society</h3>
+                            <p class="company">Tilburg University, Tilburg</p>
                         </div>
                         <span class="item-date">
-                            <i class="fas fa-calendar"></i> Afgerond
+                            <i class="fas fa-calendar"></i> Sep 2024 - Jul 2025
                         </span>
                     </div>
                     <div class="item-description">
-                        <p>Specialisaties in data-analyse en slimme industrie.</p>
+                        <p>Masteropleiding gericht op de toepassing van data science in maatschappelijke vraagstukken, met focus op ethiek, privacy en maatschappelijke impact van data-gedreven technologie.</p>
                     </div>
                 </div>
 
                 <div class="education-item">
                     <div class="item-header">
                         <div class="item-title">
-                            <h3>Aanvullende Cursussen & Certificaten</h3>
+                            <h3>Pre-Master Data Science & Society</h3>
+                            <p class="company">Tilburg University, Tilburg</p>
                         </div>
+                        <span class="item-date">
+                            <i class="fas fa-calendar"></i> Jan 2024 - Jul 2024
+                        </span>
                     </div>
                     <div class="item-description">
+                        <p>Voorbereidingsprogramma voor de Master Data Science & Society, met focus op verdieping in programming, statistiek en data science fundamentals.</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <h3>Minor Data Science for Smart Industry</h3>
+                            <p class="company">Avans Hogeschool</p>
+                        </div>
+                        <span class="item-date">
+                            <i class="fas fa-calendar"></i> Sep 2022 - Jan 2023
+                        </span>
+                    </div>
+                    <div class="item-description">
+                        <p>Specialisatie in data science met focus op industriële toepassingen, machine learning en predictive analytics.</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <h3>Bachelor Technische Bedrijfskunde</h3>
+                            <p class="company">Avans Hogeschool, 's-Hertogenbosch</p>
+                        </div>
+                        <span class="item-date">
+                            <i class="fas fa-calendar"></i> 2019 - 2023
+                        </span>
+                    </div>
+                    <div class="item-description">
+                        <p>Bachelor opleiding met focus op de combinatie van technische en bedrijfskundige aspecten, inclusief procesoptimalisatie en data-analyse.</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <h3>HAVO</h3>
+                            <p class="company">Maurick College, Vught</p>
+                        </div>
+                        <span class="item-date">
+                            <i class="fas fa-calendar"></i> 2014 - 2019
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stages -->
+            <section class="cv-section">
+                <h2><i class="fas fa-laptop-code"></i> Stages</h2>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <h3>Afstudeerstage</h3>
+                            <p class="company">De Rooy Slijpcentrum B.V., Nuenen</p>
+                        </div>
+                        <span class="item-date">
+                            <i class="fas fa-calendar"></i> Feb 2023 - Aug 2023
+                        </span>
+                    </div>
+                    <div class="item-description">
+                        <p>Tijdens mijn afstudeerstage bij De Rooy Slijpcentrum heb ik mij gericht op het verzamelen en analyseren van machinedata van CNC frees- en slijpmachines. Mijn werk resulteerde in een succesvolle implementatie waarmee we inefficiënties in het productieproces konden aanpakken. Deze inspanningen leidden tot waardevolle verbeteringen, wat resulteerde in een beoordeling van 8.5 voor mijn stageperformance.</p>
                         <ul>
-                            <li>Power BI certificeringen en advanced training</li>
-                            <li>Python for Data Science</li>
-                            <li>Machine Learning fundamentals</li>
-                            <li>SQL & Database Management</li>
+                            <li>Ontwikkelen van data-verzamelingsystemen voor productiedata</li>
+                            <li>Analyseren van machine performance en inefficiënties</li>
+                            <li>Implementeren van dashboard oplossingen voor real-time monitoring</li>
+                            <li>Adviseren over procesoptimalisaties op basis van data-inzichten</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <h3>Stage Verbeteren & Vernieuwen</h3>
+                            <p class="company">Hoppenbrouwers Techniek, Udenhout</p>
+                        </div>
+                        <span class="item-date">
+                            <i class="fas fa-calendar"></i> Sep 2021 - Feb 2022
+                        </span>
+                    </div>
+                    <div class="item-description">
+                        <p>In een periode van zes maanden heb ik onderzoek gedaan naar de waardeketen en ook een dashboard in de BI tool Qliksense deels ontwikkeld voor de afdeling Duurzame Energie. Ik heb mijn stage bij Hoppenbrouwers Techniek afgesloten met een 8.0.</p>
+                        <ul>
+                            <li>Waardeketen analyse voor de afdeling Duurzame Energie</li>
+                            <li>Ontwikkelen van Qliksense dashboards</li>
+                            <li>Procesverbetering en innovatieprojecten</li>
+                            <li>Advisering over data-gedreven besluitvorming</li>
                         </ul>
                     </div>
                 </div>
@@ -401,6 +512,7 @@
                         <h3>Business Intelligence</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">QlikSense</span>
                             <span class="skill-tag">DAX</span>
                             <span class="skill-tag">Data Modeling</span>
                             <span class="skill-tag">Dashboarding</span>
@@ -450,13 +562,43 @@
                     <div class="skill-category">
                         <h3>Soft Skills</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">Communicatie</span>
                             <span class="skill-tag">Teamwork</span>
+                            <span class="skill-tag">Communicatie</span>
                             <span class="skill-tag">Probleemoplossend</span>
                             <span class="skill-tag">Analytisch</span>
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <!-- Talen -->
+            <section class="cv-section">
+                <h2><i class="fas fa-language"></i> Talen</h2>
+                
+                <div class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div class="skill-category">
+                        <h3>Nederlands</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Moedertaal</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Engels</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Vloeiend</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Referenties -->
+            <section class="cv-section">
+                <h2><i class="fas fa-user-check"></i> Referenties</h2>
+                
+                <p style="font-size: 1.1em; opacity: 0.95; text-align: center;">
+                    Referenties zijn beschikbaar op aanvraag.
+                </p>
             </section>
         </div>
     </main>
@@ -470,7 +612,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
