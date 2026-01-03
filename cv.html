@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Koen de Bonth</title>
+    <script defer data-domain="koendebonth.nl" src="https://plausible.io/js/script.file-downloads.outbound-links.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .cv-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .cv-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 30px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 50px rgba(6, 182, 212, 0.05);
+        }
+
+        .cv-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: var(--gradient-data);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cv-header .subtitle {
+            font-size: 1.3em;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .cv-contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .cv-contact-info a {
+            color: var(--text-light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .cv-contact-info a:hover {
+            color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .cv-section {
+            margin-bottom: 50px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 30px;
+            border: 1px solid var(--glass-border);
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 50px rgba(6, 182, 212, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .cv-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4), 0 0 30px rgba(6, 182, 212, 0.2);
+            border-color: rgba(6, 182, 212, 0.4);
+        }
+
+        .cv-section h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .cv-section h2 i {
+            font-size: 0.9em;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 35px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+        }
+
+        .experience-item:last-child, .education-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .item-title {
+            flex: 1;
+        }
+
+        .item-title h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            color: var(--text-light);
+        }
+
+        .item-title .company {
+            font-size: 1.1em;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .item-date {
+            background: rgba(6, 182, 212, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            color: var(--accent-color);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            white-space: nowrap;
+        }
+
+        .item-date.current {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-secondary);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        .item-description {
+            margin-top: 15px;
+            line-height: 1.8;
+        }
+
+        .item-description ul {
+            margin-top: 10px;
+            padding-left: 25px;
+        }
+
+        .item-description li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: rgba(30, 41, 59, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            background: rgba(30, 41, 59, 0.7);
+            border-color: rgba(6, 182, 212, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .skill-category h3 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: rgba(6, 182, 212, 0.15);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(6, 182, 212, 0.25);
+            transform: scale(1.05);
+        }
+
+        .download-cv-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient-accent);
+            color: var(--text-light);
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+        }
+
+        .download-cv-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 30px rgba(6, 182, 212, 0.6);
+            border-color: rgba(6, 182, 212, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .cv-header h1 {
+                font-size: 2em;
+            }
+
+            .item-header {
+                flex-direction: column;
+            }
+
+            .cv-contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Scroll progress indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <header id="header">
+        <h1>Koen de Bonth</h1>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav">
+            <a href="/">Home</a>
+            <a href="/cv">CV</a>
+            <a href="docs/CV_Koen_de_Bonth.pdf" download="Koen_de_Bonth_CV">Download PDF CV</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cv-container">
+            <!-- CV Header -->
+            <div class="cv-header">
+                <h1>Koen de Bonth</h1>
+                <p class="subtitle">Data Analist | BI Specialist | ML Enthusiast</p>
+                <div class="cv-contact-info">
+                    <a href="https://www.linkedin.com/in/koendebonth/" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="/contact">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                    <a href="https://github.com/koendebonth" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+                <a href="docs/CV_Koen_de_Bonth.pdf" download="Koen_de_Bonth_CV" class="download-cv-btn">
+                    <i class="fas fa-download"></i> Download PDF CV
+                </a>
+            </div>
+
+            <!-- Over Mij -->
+            <section class="cv-section">
+                <h2><i class="fas fa-user"></i> Over Mij</h2>
+                <p style="line-height: 1.8; font-size: 1.1em;">
+                    Gedreven data professional met een achtergrond in Technische Bedrijfskunde en specialisaties in 
+                    data-analyse en slimme industrie. Met ervaring in tools zoals Power BI, Python en SQL zet ik 
+                    data om in waardevolle inzichten om processen te optimaliseren en innovatieve oplossingen te 
+                    realiseren. Mijn passie voor technologie en data vormt de kern van mijn werk.
+                </p>
+            </section>
+
+            <!-- Werkervaring -->
+            <section class="cv-section">
+                <h2><i class="fas fa-briefcase"></i> Werkervaring</h2>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <h3>Data Analist</h3>
+                            <p class="company">Andra Tech Group</p>
+                        </div>
+                        <span class="item-date current">
+                            <i class="fas fa-calendar"></i> Okt 2024 - Heden
+                        </span>
+                    </div>
+                    <div class="item-description">
+                        <p>Als Data Analist ben ik verantwoordelijk voor het analyseren van complexe datasets en het ontwikkelen van data-gedreven oplossingen voor diverse klanten.</p>
+                        <ul>
+                            <li>Ontwikkelen van dashboards en rapportages in Power BI</li>
+                            <li>Data-analyse met Python en SQL</li>
+                            <li>Adviseren van klanten over data strategie en implementatie</li>
+                            <li>Automatiseren van data processen</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <h3>Data Analist / BI Developer</h3>
+                            <p class="company">De Rooy</p>
+                        </div>
+                        <span class="item-date">
+                            <i class="fas fa-calendar"></i> Tot Okt 2024
+                        </span>
+                    </div>
+                    <div class="item-description">
+                        <p>Verantwoordelijk voor het ontwikkelen en onderhouden van Business Intelligence oplossingen en data-analyses.</p>
+                        <ul>
+                            <li>Ontwerpen en bouwen van Power BI dashboards voor operationele en strategische rapportages</li>
+                            <li>Data-extractie, -transformatie en -laden (ETL) processen</li>
+                            <li>SQL queries schrijven voor data-analyse en rapportage</li>
+                            <li>Samenwerken met verschillende afdelingen om data-gedreven beslissingen te faciliteren</li>
+                            <li>Training en ondersteuning van gebruikers in Power BI</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Opleidingen -->
+            <section class="cv-section">
+                <h2><i class="fas fa-graduation-cap"></i> Opleidingen</h2>
+                
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <h3>Technische Bedrijfskunde</h3>
+                            <p class="company">Hogeschool/Universiteit</p>
+                        </div>
+                        <span class="item-date">
+                            <i class="fas fa-calendar"></i> Afgerond
+                        </span>
+                    </div>
+                    <div class="item-description">
+                        <p>Specialisaties in data-analyse en slimme industrie.</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">
+                            <h3>Aanvullende Cursussen & Certificaten</h3>
+                        </div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Power BI certificeringen en advanced training</li>
+                            <li>Python for Data Science</li>
+                            <li>Machine Learning fundamentals</li>
+                            <li>SQL & Database Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Vaardigheden -->
+            <section class="cv-section">
+                <h2><i class="fas fa-code"></i> Vaardigheden</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Business Intelligence</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">DAX</span>
+                            <span class="skill-tag">Data Modeling</span>
+                            <span class="skill-tag">Dashboarding</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Programmeren</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Data & Analytics</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Data Analysis</span>
+                            <span class="skill-tag">ETL</span>
+                            <span class="skill-tag">Data Visualization</span>
+                            <span class="skill-tag">Statistical Analysis</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Machine Learning</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">Regression</span>
+                            <span class="skill-tag">Classification</span>
+                            <span class="skill-tag">Model Evaluation</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Tools & Platforms</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">Excel</span>
+                            <span class="skill-tag">Jupyter</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Soft Skills</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Communicatie</span>
+                            <span class="skill-tag">Teamwork</span>
+                            <span class="skill-tag">Probleemoplossend</span>
+                            <span class="skill-tag">Analytisch</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Koen's Portfolio</p>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll naar boven">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
