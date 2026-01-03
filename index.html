@@ -12,13 +12,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <header>
+    <!-- Scroll progress indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <header id="header">
         <h1>Koen de Bonth</h1>
-        <nav>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav">
             <a href="/">Home</a>
             <a href="docs/CV_Koen_de_Bonth.pdf" download="Koen_de_Bonth_CV">Download mijn CV</a>
             <a href="/contact">Contact</a>
@@ -39,7 +47,7 @@
                 Hallo! Ik ben Koen, <span id="leeftijd"></span> jaar oud, en een gedreven data professional met een achtergrond in Technische Bedrijfskunde en specialisaties in data-analyse en slimme industrie. Met ervaring in tools zoals Power BI, Python en SQL zet ik data om in waardevolle inzichten om processen te optimaliseren en innovatieve oplossingen te realiseren. Mijn passie voor technologie en data vormt de kern van mijn werk.
             </p>
             <a href="https://www.linkedin.com/in/koendebonth/" target="_blank" class="linkedin-button">
-                <i class="fa fa-linkedin"></i> LinkedIn
+                <i class="fab fa-linkedin"></i> Bekijk mijn LinkedIn
             </a>
         </section>
 
@@ -76,6 +84,11 @@
     <footer>
         <p>© 2025 Koen's Portfolio</p>
     </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll naar boven">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="js/main.js"></script>
 </body>

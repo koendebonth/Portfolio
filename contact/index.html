@@ -10,11 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Contact - Koen de Bonth</h1>
-        <nav>
+    <!-- Scroll progress indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <header id="header">
+        <h1>Koen de Bonth</h1>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav">
             <a href="/">Home</a>
             <a href="../docs/CV_Koen_de_Bonth.pdf" download="Koen_de_Bonth_CV">Download mijn CV</a>
             <a href="/contact">Contact</a>
@@ -40,8 +49,15 @@
     </main>
 
     <footer>
-        <p>© 2024 Koen's Portfolio</p>
+        <p>© 2025 Koen's Portfolio</p>
     </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll naar boven">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>
 
